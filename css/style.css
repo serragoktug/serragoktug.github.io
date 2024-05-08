@@ -85,7 +85,7 @@
 
     font-size: max(3vh, 3vw);
 
-    opacity: calc((var(--scroll) - 5000) / 1000);
+    opacity: calc((var(--scroll) - 7000) / 1000);
 }
 
 #ozel-gun {
@@ -108,7 +108,7 @@
 
     font-size: max(3vh, 3vw);
 
-    opacity: calc((var(--scroll) - 11000) / 1000);
+    opacity: calc((var(--scroll) - 15000) / 1000);
 }
 
 #mekan {
@@ -129,7 +129,7 @@
 
     font-size: max(3vh, 3vw);
 
-    opacity: calc((var(--scroll) - 14000) / 1000);
+    opacity: calc((var(--scroll) - 18000) / 1000);
 }
 
 #adres {
@@ -150,7 +150,7 @@
 
     font-size: max(1.5vh, 1.5vw);
 
-    opacity: calc((var(--scroll) - 14000) / 1000);
+    opacity: calc((var(--scroll) - 18000) / 1000);
 }
 
 #map {
@@ -164,7 +164,7 @@
     font-family: YAFdJhX-538-0;
     font-size: max(1.5vh, 1.5vw);
 
-    opacity: calc((var(--scroll) - 16000) / 1000);
+    opacity: calc((var(--scroll) - 20000) / 1000);
 
 }
 
@@ -186,7 +186,7 @@
 }
 
 .navbar {
-    opacity: calc((19000 - var(--scroll)) / 1000);
+    opacity: calc((23000 - var(--scroll)) / 1000);
 }
 
 .navbar-brand img {
@@ -230,7 +230,7 @@
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    opacity: calc((var(--scroll) - 9000) / 1000);
+    opacity: calc((var(--scroll) - 11000) / 1000);
 }
 
 .img-2-bg {
@@ -241,7 +241,7 @@
     left: 0px;
     top: 0px;
     z-index: -1;
-    opacity: calc((var(--scroll) - 8000) / 1000);
+    opacity: calc((var(--scroll) - 10000) / 1000);
 }
 
 .img-last {
@@ -249,7 +249,7 @@
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    opacity: calc((var(--scroll) - 20000) / 1000);
+    opacity: calc((var(--scroll) - 26000) / 1000);
 }
 
 .last-bg {
@@ -262,7 +262,7 @@
     z-index: -1;
     background-color: black;
 
-    opacity: calc((var(--scroll) - 19000) / 1000);
+    opacity: calc((var(--scroll) - 23000) / 1000);
 
 }
 
