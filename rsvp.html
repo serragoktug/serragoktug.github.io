@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <base href="/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serra & Göktuğ - RSVP</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="26387fa4f5b1e3f7b6217b27d79bf264.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="2d0b56e7e51cf11036ad8734bdb67e2d.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="725b756a69a7d4c235070e51acd85560.png" sizes="180x180">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS / Custom JS -->
+    <link rel="stylesheet" href="css/rsvp.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="canva.css" />
+
+    <script src="js/script.js" defer></script>
+    <script src="js/form.js" defer></script>
+
+
+
+    <style>
+        .navbar-brand img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        p,
+        label {
+            font-size: 2vh;
+        }
+
+        .form-title {
+            font-size: 3vh;
+            margin-bottom: 10vh;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #f8f9fa!important;">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="row" style="width: 100%; margin: 0; align-items: center;">
+            <div class="col-md-3 col-0">
+                <!-- Left empty for alignment -->
+            </div>
+            <div class="col-md-6 col-12" style="text-align: center;">
+                <a class="navbar-brand" href="#">
+                    <img id="brand-image" src="images/dfcb8724f9fc4ca38829774224a85c78.svg"
+                        alt="Sweet Pea Flower Line Illustration" loading="lazy">
+                </a>
+            </div>
+            <div class="col-md-3 col-12">
+                <div class="row" style="width: 100%; margin: 0;">
+                    <a class="col nav-link" href="#Tarih" style="display: inline-block; text-align: center;">Tarih</a>
+                    <a class="col nav-link" href="#Mekan" style="display: inline-block;">Mekan</a>
+                    <a class="col nav-link" href="#Konaklama" style="display: inline-block;">Konaklama</a>
+                    <a class="col nav-link" href="#RSVP" style="display: inline-block;">RSVP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="root">
+        <div id="container" style="height: 100vh;">
+
+            <div class="container-fluid px-1 py-5 mx-auto" style="margin-top: 15vh;">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                        <!-- <h2 style="font-family: YAFdJhX-538-0;">RSVP</h3> -->
+                        <p style="font-family: YAFdJhX-538-0;">Katılım durumunuzu öğrenmekten memnuniyet duyacağız. </p>
+                        <div id="card-attendance" class="card">
+
+                            <p class="text-center mb-4 form-title">Katılım Durumu</p>
+
+                            <form class="form-card" onsubmit="event.preventDefault()" method="POST"
+                                id="registrationform">
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex">
+                                        <label class="form-control-label px-3">Adınız<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" id="fname" name="fname" placeholder="" onblur="validate(1)">
+                                    </div>
+                                    <div class="form-group col-sm-6 flex-column d-flex">
+                                        <label class="form-control-label px-3">Soyadınız<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" id="lname" name="lname" placeholder="" onblur="validate(2)">
+                                    </div>
+                                </div>
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex">
+                                        <label class="form-control-label px-3">Email<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">
+                                    </div>
+                                    <div class="form-group col-sm-6 flex-column d-flex">
+                                        <label class="form-control-label px-3">Telefon Numaranız<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)">
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex">
+                                        <label class="form-control-label px-3">Kişi Sayısı<span
+                                                class="text-danger">*</span></label>
+                                        <select id="no_attendees" class="mr-sm-2" id="inlineFormCustomSelect"
+                                            placeholder="Seçiniz" onblur="validate(5)">
+                                            <option selected>-</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-sm-6 flex-column d-flex">
+                                        <label class="form-control-label px-3">Katılım Durumunuz<span
+                                                class="text-danger">*</span></label>
+                                        <select id="attendance" class="mr-sm-2" id="inlineFormCustomSelect"
+                                            placeholder="Seçiniz" onblur="validate(6)">
+                                            <option selected>-</option>
+                                            <option value="1">🩵 Katılacağım</option>
+                                            <option value="0">😢 Katılamayacağım</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-end", style="margin-top: 3vh;">
+                                    <div class="form-group col-sm-6">
+                                        <button type="submit" class="btn-block btn-secondary"
+                                            sendMessage()>Gönder</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="card-attendance-message" class="card" style="display: none;">
+                            <p style="font-family: YAFdJhX-538-0;">Mesajınızı aldık, çok teşekkür ederiz :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>
