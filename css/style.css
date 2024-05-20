@@ -191,7 +191,7 @@
 }
 
 .navbar-brand img {
-    max-width: 100px;
+    max-width: 36px;
     /* Adjust the maximum width of your picture */
     height: auto;
     /* Maintain aspect ratio */
