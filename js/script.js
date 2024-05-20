@@ -15,17 +15,66 @@ window.addEventListener("scroll", setScrollVar)
 window.addEventListener("resize", setScrollVar)
 
 function setScrollVar() {
+  var firstItemPositionTop = document.getElementById("first-item").offsetTop;
+  var secondItemPositionTop = document.getElementById("second-item").offsetTop;
+  var thirdItemPositionTop = document.getElementById("third-item").offsetTop;
+  var fourthItemPositionTop = document.getElementById("fourth-item").offsetTop;
+  var fifthItemPositionTop = document.getElementById("fifth-item").offsetTop;
+  var sixthItemPositionTop = document.getElementById("sixth-item").offsetTop;
+  var seventhItemPositionTop = document.getElementById("seventh-item").offsetTop;
+
   const htmlElement = document.documentElement
   const percentOfScreenHeightScrolled =
     htmlElement.scrollTop / htmlElement.clientHeight
-//   console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
-//   console.log(htmlElement.scrollTop)
 
   htmlElement.style.setProperty(
     "--scroll",
     htmlElement.scrollTop
-    // Math.min(percentOfScreenHeightScrolled * 100, 100)
   )
+
+  if (htmlElement.scrollTop >= secondItemPositionTop-100) {
+      loadContent("img-1");
+  }
+
+  if (htmlElement.scrollTop >= thirdItemPositionTop-100) {
+    loadContent("evleniyoruz");
+  }
+
+  if (htmlElement.scrollTop >= fourthItemPositionTop-100) {
+    loadContent("img-2");
+  }
+
+  if (htmlElement.scrollTop >= fifthItemPositionTop-100) {
+    loadContent("ozel-gun");
+  }
+
+  if (htmlElement.scrollTop >= sixthItemPositionTop-100) {
+    loadContent("time-1");
+    loadContent("time-2");
+
+    loadContent("location-name");
+    loadContent("address-1");
+    loadContent("address-2");
+  }
+
+  if (htmlElement.scrollTop >= sixthItemPositionTop+100) {
+    loadContent("rsvp");
+    loadContent("map");
+  }
+
+  if (htmlElement.scrollTop >= seventhItemPositionTop) {
+    loadContent("img-last");
+  }
+
+  
+
+
 }
+
+function loadContent(id) {
+  var contentSection = document.getElementById(id);
+  contentSection.classList.add("loaded");
+}
+
 
 setScrollVar()

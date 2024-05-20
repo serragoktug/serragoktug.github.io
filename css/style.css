@@ -17,7 +17,7 @@
 
     font-size: max(5vh, 5vw);
 
-    opacity: calc(min(80 / var(--scroll) - 0.1, 1));
+    /* opacity: calc(min(80 / var(--scroll) - 0.1, 1)); */
 }
 
 #amp {
@@ -38,7 +38,7 @@
 
     /* scale: calc( max((var(--scroll) / 100 * 5) - 3, 1) ); */
     transform: rotate(calc(1deg * var(--scroll) / 3));
-    opacity: calc(min(130 / var(--scroll) - 0.1, 1));
+    /* opacity: calc(min(130 / var(--scroll) - 0.1, 1)); */
 
 
 }
@@ -63,7 +63,7 @@
 
     font-size: max(5vh, 5vw);
 
-    opacity: calc(min(80 / var(--scroll) - 0.1, 1));
+    /* opacity: calc(min(80 / var(--scroll) - 0.1, 1)); */
 }
 
 #evleniyoruz {
@@ -71,7 +71,6 @@
     box-sizing: border-box;
     width: 100%;
     transform: rotate(0deg);
-    opacity: 1.0;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
@@ -85,7 +84,7 @@
 
     font-size: max(3vh, 3vw);
 
-    opacity: calc((var(--scroll) - 7000) / 1000);
+    /* opacity: calc((var(--scroll) - 7000) / 1000); */
 }
 
 #ozel-gun {
@@ -108,10 +107,10 @@
 
     font-size: max(3vh, 3vw);
 
-    opacity: calc((var(--scroll) - 15000) / 1000);
+    /* opacity: calc((var(--scroll) - 15000) / 1000); */
 }
 
-#mekan {
+.adres-title {
     box-sizing: border-box;
     width: 100%;
     transform: rotate(0deg);
@@ -129,10 +128,10 @@
 
     font-size: max(3vh, 3vw);
 
-    opacity: calc((var(--scroll) - 18000) / 1000);
+    /* opacity: calc((var(--scroll) - 18000) / 1000); */
 }
 
-#adres {
+.adres-text {
     box-sizing: border-box;
     width: 100%;
     transform: rotate(0deg);
@@ -150,10 +149,10 @@
 
     font-size: max(1.5vh, 1.5vw);
 
-    opacity: calc((var(--scroll) - 18000) / 1000);
+    /* opacity: calc((var(--scroll) - 18000) / 1000); */
 }
 
-#map {
+.map {
     /* padding: 10vh; */
     display: flex;
     align-items: center;
@@ -164,7 +163,7 @@
     font-family: YAFdJhX-538-0;
     font-size: max(1.5vh, 1.5vw);
 
-    opacity: calc((var(--scroll) - 20000) / 1000);
+    /* opacity: calc((var(--scroll) - 20000) / 1000); */
 
 }
 
@@ -206,15 +205,15 @@
     /* margin-bottom: 10vh; */
 }
 
-.img-1 {
-    /* width: 100vw; */
+.img {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    opacity: calc((var(--scroll) - 3000) / 1000);
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
-.img-1-bg {
+.img-bg {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
@@ -222,48 +221,10 @@
     left: 0px;
     top: 0px;
     z-index: -1;
-    opacity: calc((var(--scroll) - 2000) / 1000);
 }
 
-.img-2 {
-    /* width: 100vw; */
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    opacity: calc((var(--scroll) - 11000) / 1000);
-}
-
-.img-2-bg {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-    opacity: calc((var(--scroll) - 10000) / 1000);
-}
-
-.img-last {
-    /* width: 100vw; */
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    opacity: calc((var(--scroll) - 26000) / 1000);
-}
-
-.last-bg {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
+#last-bg {
     background-color: black;
-
-    opacity: calc((var(--scroll) - 23000) / 1000);
-
 }
 
 .over {
@@ -297,23 +258,65 @@
 .section {
     margin-bottom: 10vh;
 }
-/* 
-.inputfield {
-    height: 50px
-}
-
-.rsvp-form {
-    border-radius: 10px;
-    background-color: white;
-    padding: 50px;
-}
-
-.form-input {
-    margin-bottom: 10px;
-} */
 
 #brand-image {
     height: 6vh;
     height: calc(max((((var(--scroll) - 1500) / 200) * -1vh), 4vh));
     margin: 1vh;
+}
+
+
+/* ITEMS */
+
+.content {
+    top: 0;
+    height: 98vh;
+    position: relative;
+}
+
+.text {
+    padding-top: 40vh;
+}
+
+.invisible-text {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.map {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+#first-item {
+    padding-top: 30vh;
+}
+
+#second-item {
+    
+}
+
+#third-item {
+    
+}
+
+#forth-item {
+    
+}
+
+#fifth-item {
+    height: 60vh;
+    
+}
+
+#sixth-item {
+    margin-bottom: 30vh;
+}
+
+#seventh-item {
+    padding: 0;
 }
