@@ -57,7 +57,7 @@ function setScrollVar() {
     loadContent("address-2");
   }
 
-  if (htmlElement.scrollTop >= sixthItemPositionTop+100) {
+  if (htmlElement.scrollTop >= sixthItemPositionTop) {
     loadContent("rsvp");
     loadContent("map");
   }
